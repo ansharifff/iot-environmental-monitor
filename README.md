@@ -1,29 +1,25 @@
 # IoT Environmental Monitor
 
-## Project Overview
-Real-time environmental monitoring system using Arduino, DHT22 sensor, 
-light sensor, and OLED display with persistent data logging.
+Real-time environmental monitoring system using Arduino, dual DHT22 sensors, a BH1750 light sensor, and an OLED display, with persistent SD card data logging.
+
+**Skills demonstrated:** Sensor interfacing (I2C + analog), embedded C, data logging, systems integration
 
 ## Components
 - Arduino Uno R3
-- DHT22 Temperature/Humidity Sensor (2x)
+- DHT22 Temperature/Humidity Sensor (2×)
 - BH1750 Light Sensor
-- 1.3" OLED Display (128x64)
+- 1.3" OLED Display (128×64)
 - Micro SD Card Module + 16GB card
-- Breadboard + Jumper wires
+- Breadboard + jumper wires
 
-## Current Status
-🚀 **In Progress** - Week 1: Hardware Setup
+## How It Works
+- Sensors are polled every [3 seconds] and readings are displayed live on the OLED
+- Data is logged to the SD card in [CSV / plain text] format with a timestamp per entry
 
-## Project Timeline
-- Week 1-2: Wiring + basic sensor reading
-- Week 3: Display integration + data logging
-- Week 4: Final testing + documentation
+## Status
+Completed — wiring, sensor reads, OLED display, and SD logging are all functional and tested.
 
-## What I'm Learning
-- Embedded systems & microcontroller programming
-- Sensor interfacing (I2C, analog)
-- Data persistence (SD card)
-- Systems integration
-
-More details coming as project progresses...
+## What I Learned
+- Managing multiple I2C devices on one bus without address conflicts
+- Handling sensor read timing/noise on the DHT22
+- Structuring reliable data logging on embedded storage
